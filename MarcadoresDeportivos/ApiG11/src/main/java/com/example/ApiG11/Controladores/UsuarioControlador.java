@@ -17,7 +17,7 @@ import com.example.ApiG11.Modelos.UsuarioModelo;
 import com.example.ApiG11.Servicios.UsuarioServicio;
 
 @RestController
-//http://localhost:8080/usuario
+//https://paginawebmarcadoresdeportivosg3c4.netlify.app/usuario
 @RequestMapping("/usuario")
 @CrossOrigin("*")
 public class UsuarioControlador {
@@ -25,31 +25,31 @@ public class UsuarioControlador {
     @Autowired
     UsuarioServicio servicio;
 
-    //http://localhost:8080/usuario/guardar
+    //https://paginawebmarcadoresdeportivosg3c4.netlify.app/usuario/guardar
     @PostMapping("/guardar")
     public UsuarioModelo guardar(@RequestBody UsuarioModelo usuario){
         return servicio.guardarUsuario(usuario);
     }
 
-    //http://localhost:8080/usuario/consultar
+    //https://paginawebmarcadoresdeportivosg3c4.netlify.app/usuario/consultar
     @GetMapping("/consultar")
     public ArrayList<UsuarioModelo> consultarUsuario(){
         return servicio.consultarUsuarios();
     }
 
-    //http://localhost:8080/usuario/consultaNumero/
+    //https://paginawebmarcadoresdeportivosg3c4.netlify.app/usuario/consultaNumero/
     @GetMapping("/consultaNumero/{numero}")
     public Optional<UsuarioModelo> consultaNumero(@PathVariable("numero")Long numero){
         return servicio.consultaNumero(numero);
     }
 
-    //http://localhost:8080/usuario/borrar/
+    //https://paginawebmarcadoresdeportivosg3c4.netlify.app/usuario/borrar/
     @DeleteMapping("/borrar/{numero}")
     public Boolean eliminaUsuario(@PathVariable("numero") Long numero){
         return servicio.eliminaUsuario(numero);
     }
 
-    //http://localhost:8080/usuario/buscaxfecha/
+    //https://paginawebmarcadoresdeportivosg3c4.netlify.app/usuario/buscaxfecha/
     @GetMapping("/buscaxfecha/{fecha}")
     public ArrayList<UsuarioModelo> buscaXfecha(@PathVariable("fecha")String fecha){
         return servicio.buscaXfecha(fecha);

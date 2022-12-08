@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>ApiG11</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>ApiG11</name>
 	<description>Api desarrollad por el grupo 11 Mision Tic</description>
 	<properties>
