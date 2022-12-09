@@ -60,7 +60,7 @@ const app= Vue.createApp({
             methods:{
                 guardarUsuario(){
                     //console.log(this.numero);
-                    const endpoint="https://paginawebmarcadoresdeportivosg3c4.netlify.app/usuario/guardar";
+                    const endpoint="https://paginadeportesbackend-production.up.railway.app/usuario/guardar";
                     const opciones={
                         method:"POST",
                         headers:{'Content-Type':"application/json"},
@@ -104,7 +104,7 @@ const app= Vue.createApp({
                 `,
                 methods:{
                     borrarUsuario(){
-                        const endpoint="https://paginawebmarcadoresdeportivosg3c4.netlify.app/usuario/borrar/"+this.idEliminar;
+                        const endpoint="https://paginadeportesbackend-production.up.railway.app/usuario/borrar/"+this.idEliminar;
                         const opciones={method:"DELETE"};
                         fetch(endpoint,opciones).then(async response=>{
                             var respuesta=await response.json();
@@ -150,7 +150,7 @@ const app= Vue.createApp({
                     `,
                     methods:{
                         buscarNumero(){
-                            const endpoint="https://paginawebmarcadoresdeportivosg3c4.netlify.app/usuario/consultaNumero/"+this.busquedaNum;
+                            const endpoint="https://paginadeportesbackend-production.up.railway.app/usuario/consultaNumero/"+this.busquedaNum;
                             const opciones={method:"GET"}
                             fetch(endpoint,opciones).then(async response=>{
                                 this.usuario=await response.json();
@@ -201,7 +201,7 @@ const app= Vue.createApp({
                     `,
                     methods:{
                         consultarUsuarios(){
-                            const endpoint="https://paginawebmarcadoresdeportivosg3c4.netlify.app/usuario/consultar";
+                            const endpoint="https://paginadeportesbackend-production.up.railway.app/usuario/consultar";
                             const opciones={method:"GET"};
                             fetch(endpoint,opciones).then(async response=>{
                                 this.usuarios=await response.json();
@@ -211,7 +211,7 @@ const app= Vue.createApp({
 
                 
                         buscarFecha(){
-                            const endpoint="https://paginawebmarcadoresdeportivosg3c4.netlify.app/usuario/buscaxfecha/"+this.buscaFecha;
+                            const endpoint="https://paginadeportesbackend-production.up.railway.app/usuario/buscaxfecha/"+this.buscaFecha;
                             const opciones={method:"GET"};
                 
                             fetch(endpoint,opciones).then(async response=>{
